@@ -159,11 +159,13 @@
   }
 
   .hero-content {
-    position: relative; z-index: 2;
-    width: 90%; max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 0 80px;
-  }
+  position: relative; z-index: 2;
+  width: 90%; max-width: 1200px;
+  margin: 0 auto;
+
+  /* was: padding: 100px 0 80px; */
+  padding: 100px 0 200px; /* increased bottom padding so actions never collide with hero-stats */
+}
   .hero-eyebrow {
     display: inline-flex; align-items: center; gap: 12px;
     margin-bottom: 24px;
@@ -786,6 +788,9 @@
     .courses-header { flex-direction: column; align-items: flex-start; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
     .section { padding: 70px 4%; }
+     .hero-content {
+    padding: 90px 0 260px; /* extra room because hero-stats wraps into 2 rows */
+  }
   }
 
   @media (max-width: 480px) {
