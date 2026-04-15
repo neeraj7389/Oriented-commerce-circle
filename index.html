@@ -814,51 +814,11 @@
     .form-row { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; text-align: center; }
     .courses-header { flex-direction: column; align-items: flex-start; }
-   .hero-actions { flex-direction: column; align-items: flex-start; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
     .section { padding: 70px 4%; }
-    /* HERO: horizontal layout on phones */
-.hero-content{
-  width: 92%;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* text | visual space */
-  align-items: center;
-  column-gap: 16px;
-
-  padding: 90px 0 150px; /* reduced from 260px */
-}
-
-/* keep actions horizontal on phone */
-.hero-actions{
-  flex-direction: row;
-  align-items: center;
-  gap: 14px;
-}
-
-/* make typography fit better on phone */
-.hero-title{
-  font-size: clamp(34px, 7vw, 52px);
-  line-height: 1;
-}
-.hero-title-bold{
-  font-size: clamp(36px, 7.5vw, 56px);
-  letter-spacing: 2px;
-  margin-bottom: 18px;
-}
-.hero-subtitle{
-  max-width: 100%;
-  font-size: 14px;
-  margin-bottom: 22px;
-}
-
-/* move orb to the right so layout feels horizontal */
-.hero-orb{
-  right: 8%;
-  top: 52%;
-  transform: translate(0, -50%);
-  width: min(220px, 38vw);
-  height: min(220px, 38vw);
-  opacity: 0.9;
-}
+     .hero-content {
+    padding: 90px 0 260px; /* extra room because hero-stats wraps into 2 rows */
+  }
   }
 
   @media (max-width: 480px) {
