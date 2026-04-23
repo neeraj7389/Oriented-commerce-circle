@@ -522,59 +522,11 @@
   .result-course { font-weight: 600; color: var(--navy); font-size: 15px; }
   .result-detail { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
 
-  .topper-card {
+ .topper-card {
     background: var(--navy);
     border-radius: 6px; padding: 40px;
     text-align: center; position: relative; overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    display: block;  /* instead of display:grid */
   }
-
-  /* ─── TOPPERS GRID FIX ─── */
-/* ─── TOPPERS GRID (desktop 4x2) ─── */
-.toppers-grid{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-  align-items: stretch;
-}
-
-/* tablet: 2 columns */
-@media (max-width: 1024px){
-  .toppers-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* mobile: 1 column */
-@media (max-width: 768px){
-  .toppers-grid{
-    grid-template-columns: 1fr;
-  }
-}
-
-/* IMPORTANT: stop forcing each topper-card into a 2-column grid */
-.toppers-grid .topper-card{
-  width: 100%;
-  height: 100%;
-  display: block;          /* was grid */
-}
-
-/* keep the decorative ::before behind the content */
-.topper-card{ position: relative; }
-.topper-card::before{ z-index: 0; }
-.topper-card > *{ position: relative; z-index: 1; }
-/* mobile 1x1 */
-@media (max-width: 768px){
-  .toppers-grid{
-    grid-template-columns: 1fr;
-  }
-  .toppers-grid .topper-card{
-    grid-template-columns: 1fr; /* stack card content on mobile */
-  }
-}
   .topper-card::before {
     content: '';
     position: absolute; top: -50%; left: -50%;
@@ -601,6 +553,7 @@
     font-style: italic; font-size: 15px; line-height: 1.7;
     color: rgba(255,255,255,0.55);
   }
+
 
   /* ─── FACULTY ─── */
   .faculty-grid {
