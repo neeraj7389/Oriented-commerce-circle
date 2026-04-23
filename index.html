@@ -587,7 +587,10 @@
     border: 3px solid var(--gold);
     margin: 0 auto 16px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 32px; position: relative;
+    font-size: 32px; position: relative; overflow: hidden;
+  }
+  .topper-avatar img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
   }
   .topper-name {
     font-family: 'Cormorant Garamond', serif;
@@ -619,6 +622,9 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 56px;
     position: relative; overflow: hidden;
+  }
+  .faculty-photo img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
   }
   .faculty-photo::after {
     content: '';
@@ -653,6 +659,10 @@
     background: var(--navy-soft);
     border: 2px solid rgba(201,168,76,0.3);
     display: flex; align-items: center; justify-content: center; font-size: 18px;
+    overflow: hidden; flex-shrink: 0;
+  }
+  .testi-avatar img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
   }
   .testi-name { font-weight: 600; color: var(--white); font-size: 14px; }
   .testi-batch { font-size: 12px; color: var(--gold); }
@@ -1091,7 +1101,7 @@
     <!-- Topper 1 (existing) -->
        <div class="toppers-grid">
     <div class="topper-card">
-      <div class="topper-avatar">🌟</div>
+      <div class="topper-avatar"><img src="https://ui-avatars.com/api/?name=Priya+Sharma&size=90&background=112244&color=C9A84C&bold=true" alt="Priya Sharma"></div>
       <div class="topper-name">Priya Sharma</div>
       <div class="topper-score">Class XII · 98.4% · District Topper</div>
       <div class="topper-quote">
@@ -1111,7 +1121,7 @@
     </div>
         <!-- Topper 2 -->
     <div class="topper-card">
-      <div class="topper-avatar">🏆</div>
+      <div class="topper-avatar"><img src="https://ui-avatars.com/api/?name=Aarav+Jain&size=90&background=112244&color=C9A84C&bold=true" alt="Aarav Jain"></div>
       <div class="topper-name">Aarav Jain</div>
       <div class="topper-score">CA Foundation · 330/400 · Top Performer</div>
       <div class="topper-quote">
@@ -1132,7 +1142,7 @@
 
     <!-- Topper 3 -->
     <div class="topper-card">
-      <div class="topper-avatar">🎓</div>
+      <div class="topper-avatar"><img src="https://ui-avatars.com/api/?name=Meera+Patel&size=90&background=112244&color=C9A84C&bold=true" alt="Meera Patel"></div>
       <div class="topper-name">Meera Patel</div>
       <div class="topper-score">Class XI · 96.2% · School Topper</div>
       <div class="topper-quote">
@@ -1153,7 +1163,7 @@
 
     <!-- Topper 4 -->
     <div class="topper-card">
-      <div class="topper-avatar">✨</div>
+      <div class="topper-avatar"><img src="https://ui-avatars.com/api/?name=Rohan+Verma&size=90&background=112244&color=C9A84C&bold=true" alt="Rohan Verma"></div>
       <div class="topper-name">Rohan Verma</div>
       <div class="topper-score">CS Foundation · 86%+ · First Attempt</div>
       <div class="topper-quote">
@@ -1189,7 +1199,7 @@
     </div>
     <div class="faculty-grid">
       <div class="faculty-card reveal visible">
-        <div class="faculty-photo" style="background: linear-gradient(135deg, #0A1628, #1A3360);">👨&zwj;💼</div>
+        <div class="faculty-photo" style="background: linear-gradient(135deg, #0A1628, #1A3360);"><img src="https://ui-avatars.com/api/?name=Rajesh+Kumar+Gupta&size=200&background=0A1628&color=C9A84C&bold=true&font-size=0.4" alt="Rajesh Kumar Gupta"></div>
         <div class="faculty-info">
           <div class="faculty-name">Rajesh Kumar Gupta</div>
           <div class="faculty-subject">Accountancy &amp; Finance</div>
@@ -1197,7 +1207,7 @@
         </div>
       </div>
       <div class="faculty-card reveal reveal-delay-1 visible">
-        <div class="faculty-photo" style="background: linear-gradient(135deg, #112244, #0A1628);">👩&zwj;🏫</div>
+        <div class="faculty-photo" style="background: linear-gradient(135deg, #112244, #0A1628);"><img src="https://ui-avatars.com/api/?name=Dr.+Meena+Agarwal&size=200&background=112244&color=C9A84C&bold=true&font-size=0.4" alt="Dr. Meena Agarwal"></div>
         <div class="faculty-info">
           <div class="faculty-name">Dr. Meena Agarwal</div>
           <div class="faculty-subject">Economics</div>
@@ -1205,7 +1215,7 @@
         </div>
       </div>
       <div class="faculty-card reveal reveal-delay-2 visible">
-        <div class="faculty-photo" style="background: linear-gradient(135deg, #1A3360, #112244);">👨&zwj;💻</div>
+        <div class="faculty-photo" style="background: linear-gradient(135deg, #1A3360, #112244);"><img src="https://ui-avatars.com/api/?name=Amit+Srivastava&size=200&background=1A3360&color=C9A84C&bold=true&font-size=0.4" alt="Amit Srivastava"></div>
         <div class="faculty-info">
           <div class="faculty-name">Amit Srivastava</div>
           <div class="faculty-subject">Business Studies</div>
@@ -1213,7 +1223,7 @@
         </div>
       </div>
       <div class="faculty-card reveal reveal-delay-3 visible">
-        <div class="faculty-photo" style="background: linear-gradient(135deg, #0A1628, #1A3360);">👩&zwj;💼</div>
+        <div class="faculty-photo" style="background: linear-gradient(135deg, #0A1628, #1A3360);"><img src="https://ui-avatars.com/api/?name=Sunita+Verma&size=200&background=0A1628&color=C9A84C&bold=true&font-size=0.4" alt="Sunita Verma"></div>
         <div class="faculty-info">
           <div class="faculty-name">Sunita Verma</div>
           <div class="faculty-subject">CA Foundation</div>
@@ -1236,7 +1246,7 @@
         <div class="testi-stars">★★★★★</div>
         <div class="testi-text">"The faculty at OCC are exceptional. My Accounts teacher made even complex concepts seem simple. I scored 95 in boards!"</div>
         <div class="testi-author">
-          <div class="testi-avatar">👦</div>
+          <div class="testi-avatar"><img src="https://ui-avatars.com/api/?name=Aryan+Mehta&size=44&background=1A3360&color=C9A84C&bold=true" alt="Aryan Mehta"></div>
           <div><div class="testi-name">Aryan Mehta</div><div class="testi-batch">Class XII · Batch 2024</div></div>
         </div>
       </div>
@@ -1244,7 +1254,7 @@
         <div class="testi-stars">★★★★★</div>
         <div class="testi-text">"I cleared CA Foundation in my first attempt thanks to OCC. The mock tests and study material are absolutely top-notch."</div>
         <div class="testi-author">
-          <div class="testi-avatar">👧</div>
+          <div class="testi-avatar"><img src="https://ui-avatars.com/api/?name=Riya+Kapoor&size=44&background=1A3360&color=C9A84C&bold=true" alt="Riya Kapoor"></div>
           <div><div class="testi-name">Riya Kapoor</div><div class="testi-batch">CA Foundation · May 2024</div></div>
         </div>
       </div>
@@ -1252,7 +1262,7 @@
         <div class="testi-stars">★★★★★</div>
         <div class="testi-text">"Small batch sizes and personal attention make OCC stand out. I felt like every teacher genuinely cared about my progress."</div>
         <div class="testi-author">
-          <div class="testi-avatar">👦</div>
+          <div class="testi-avatar"><img src="https://ui-avatars.com/api/?name=Karan+Patel&size=44&background=1A3360&color=C9A84C&bold=true" alt="Karan Patel"></div>
           <div><div class="testi-name">Karan Patel</div><div class="testi-batch">CS Foundation · 2023</div></div>
         </div>
       </div>
