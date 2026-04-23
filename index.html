@@ -522,9 +522,17 @@
   .result-course { font-weight: 600; color: var(--navy); font-size: 15px; }
   .result-detail { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
 
- .topper-card {
+  /* ─── TOPPERS GRID ─── */
+  .toppers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .topper-card {
     background: var(--navy);
-    border-radius: 6px; padding: 40px;
+    border-radius: 6px; padding: 32px;
     text-align: center; position: relative; overflow: hidden;
   }
   .topper-card::before {
@@ -776,6 +784,7 @@
     .about-card-main { width: 100%; }
     .about-badge { display: none; }
 
+    .toppers-grid { grid-template-columns: 1fr; }
     .courses-grid { grid-template-columns: 1fr; gap: 2px; }
     .features-grid { grid-template-columns: 1fr; }
     .faculty-grid { grid-template-columns: 1fr 1fr; }
@@ -1035,14 +1044,13 @@
 <!-- RESULTS -->
 <section class="section results-section" id="results">
   <div class="section-inner">
-    <div class="results-grid">
-      <div class="reveal visible">
-        <div class="section-label">Our Track Record</div>
-        <h2 class="section-title">Results That<br><em>Speak Volumes</em></h2>
-        <p class="section-body">Year after year, OCC students consistently rank among the top performers in board examinations and professional entrance tests.</p>
-      <div class="reveal reveal-delay-2 visible">
-    <!-- Topper 1 (existing) -->
-       <div class="toppers-grid">
+    <div style="text-align:center; margin-bottom:48px;" class="reveal visible">
+      <div class="section-label" style="justify-content:center;">Our Track Record</div>
+      <h2 class="section-title">Results That <em>Speak Volumes</em></h2>
+      <p class="section-body" style="max-width:600px; margin:0 auto;">Year after year, OCC students consistently rank among the top performers in board examinations and professional entrance tests.</p>
+    </div>
+    <div class="reveal reveal-delay-1 visible">
+      <div class="toppers-grid">
     <div class="topper-card">
       <div class="topper-avatar">🌟</div>
       <div class="topper-name">Priya Sharma</div>
@@ -1124,10 +1132,6 @@
         </div>
       </div>
     </div>
-        </div>
-
-  </div>
-</div>
       </div>
     </div>
   </div>
